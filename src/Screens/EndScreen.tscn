@@ -1,0 +1,120 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://assets/ui_theme.tres" type="Theme" id=1]
+[ext_resource path="res://src/Screens/EndScreen.gd" type="Script" id=2]
+[ext_resource path="res://cathedral/Chomsky.otf" type="DynamicFontData" id=3]
+[ext_resource path="res://src/UserInterface/Title.tscn" type="PackedScene" id=4]
+[ext_resource path="res://src/UserInterface/SceneChangeButton.tscn" type="PackedScene" id=5]
+[ext_resource path="res://cathedral/rqesadtfg.png" type="Texture" id=6]
+[ext_resource path="res://src/UserInterface/QuitButton.tscn" type="PackedScene" id=7]
+[ext_resource path="res://cathedral/rsz_ui_concrete_1.png" type="Texture" id=8]
+
+[sub_resource type="DynamicFont" id=1]
+size = 67
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 42
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 29
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 30
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 34
+font_data = ExtResource( 3 )
+
+[node name="EndScreen" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource( 1 )
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 2.51746
+margin_top = -50.6846
+margin_right = 2.51746
+margin_bottom = 45.3154
+texture = ExtResource( 6 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Title" parent="." instance=ExtResource( 4 )]
+custom_fonts/font = SubResource( 1 )
+text = "Congratulations you finished the game!"
+
+[node name="Result" type="Label" parent="."]
+anchor_right = 1.0
+margin_top = 230.0
+margin_bottom = 400.0
+custom_fonts/font = SubResource( 2 )
+text = "Your final score is: %s and you died %s times!"
+align = 1
+valign = 1
+
+[node name="Menu" type="VBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -180.0
+margin_top = -75.0
+margin_right = 180.0
+margin_bottom = 79.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PlayButton" parent="Menu" instance=ExtResource( 5 )]
+margin_right = 360.0
+margin_bottom = 73.0
+custom_fonts/font = SubResource( 3 )
+text = "Play Again"
+next_scene_path = "res://src/Screens/MainScreen.tscn"
+
+[node name="QuitButton" parent="Menu" instance=ExtResource( 7 )]
+margin_top = 81.0
+margin_right = 360.0
+margin_bottom = 154.0
+custom_fonts/font = SubResource( 4 )
+
+[node name="rsz_ui_concrete_1" type="Sprite" parent="Menu"]
+position = Vector2( 180.246, 35.0663 )
+scale = Vector2( 2.88871, 2.45094 )
+texture = ExtResource( 8 )
+
+[node name="rsz_ui_concrete_2" type="Sprite" parent="Menu"]
+position = Vector2( 181.961, 119.089 )
+scale = Vector2( 2.88871, 2.45094 )
+texture = ExtResource( 8 )
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+margin_left = 884.847
+margin_top = 483.678
+margin_right = 1052.85
+margin_bottom = 535.678
+custom_fonts/normal_font = SubResource( 5 )
+text = "Play Again"
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="."]
+margin_left = 931.395
+margin_top = 562.798
+margin_right = 1099.4
+margin_bottom = 614.798
+custom_fonts/normal_font = SubResource( 5 )
+text = "Quit"
+__meta__ = {
+"_edit_use_anchors_": false
+}

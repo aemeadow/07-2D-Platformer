@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Prison.ogg-54f51650f2e4659c12604762a8e86506.oggstr"
+
+[deps]
+
+source_file="res://music/Prison.ogg"
+dest_files=[ "res://.import/Prison.ogg-54f51650f2e4659c12604762a8e86506.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Sharpest.ogg-a85a99854db236dea4196c58337fe98a.oggstr"
+
+[deps]
+
+source_file="res://music/Sharpest.ogg"
+dest_files=[ "res://.import/Sharpest.ogg-a85a99854db236dea4196c58337fe98a.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

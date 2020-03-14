@@ -1,0 +1,47 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://src/Actors/Enemy.gd" type="Script" id=1]
+[ext_resource path="res://cathedral/0Bride2.png" type="Texture" id=2]
+
+[sub_resource type="OccluderPolygon2D" id=1]
+polygon = PoolVector2Array( -5.11001, 17.0939, -13.1379, 16.0904, -23.8532, 12.4336, -25.8559, 6.02475, -24.2537, -2.78736, -18.4457, -19.2099, -31.0631, -8.99589, -33.6667, -14.4033, -25.4554, -30.0248, -15.0411, -38.4364, -18.0452, -44.4446, -18.2455, -55.4597, -5.02731, -56.2608, 0.179855, -50.2526, -1.62262, -37.8355, 2.18261, -32.8286, 1.58178, -16.8066, 3.58453, -10.1975, 8.99196, -6.79286, 12.7972, -2.58708, 16.8027, 1.01788, 9.99334, 8.82861, 3.58691, 17.0939 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 40, 34 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 40, 10.5328 )
+
+[node name="Enemy" type="KinematicBody2D"]
+collision_layer = 2
+collision_mask = 4
+script = ExtResource( 1 )
+gravity = 1e+06
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 6.16179, -21.1609 )
+scale = Vector2( 5, 5 )
+texture = ExtResource( 2 )
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Sprite"]
+scale = Vector2( 0.25, 0.25 )
+occluder = SubResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0, -34 )
+shape = SubResource( 2 )
+
+[node name="StompArea2D" type="Area2D" parent="."]
+position = Vector2( 0, -66.4549 )
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StompArea2D"]
+position = Vector2( 0, -4.93669 )
+shape = SubResource( 3 )
+
+[node name="VisibilityEnabler2D" type="VisibilityEnabler2D" parent="."]
+position = Vector2( 0, -33 )
+rect = Rect2( -50, -33, 100, 66 )
+process_parent = true
+physics_process_parent = true
+[connection signal="area_entered" from="StompArea2D" to="." method="_on_StompArea2D_area_entered"]

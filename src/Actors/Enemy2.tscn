@@ -1,0 +1,41 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://src/Levels/Enemy2.gd" type="Script" id=1]
+[ext_resource path="res://cathedral/0Groom2.png" type="Texture" id=2]
+
+[sub_resource type="OccluderPolygon2D" id=1]
+polygon = PoolVector2Array( 4, -0.4, 5.4, 7, 4, 7, 4, 11, 2, 11, 2, 13, -4, 13, -4, 9.9, -3, -3.2, -3, -6, 4, -6 )
+
+[sub_resource type="RectangleShape2D" id=2]
+
+[node name="Enemy2" type="KinematicBody2D"]
+position = Vector2( 862.423, 805.178 )
+scale = Vector2( 5, 5 )
+collision_layer = 2
+collision_mask = 4
+script = ExtResource( 1 )
+gravity = 1e+07
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 2 )
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Sprite"]
+scale = Vector2( 1, 1 )
+occluder = SubResource( 1 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PoolVector2Array( 4, -0.4, 5.4, 7, 4, 7, 4, 11, 2, 11, 2, 13, -4, 13, -4, 9.9, -3, -3.2, -3, -6, 4, -6 )
+
+[node name="StompArea2D" type="Area2D" parent="."]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StompArea2D"]
+position = Vector2( 0.128511, 4.36941 )
+shape = SubResource( 2 )
+
+[node name="VisibilityEnabler2D" type="VisibilityEnabler2D" parent="."]
+position = Vector2( -0.385536, 9.25287 )
+scale = Vector2( 1, 0.498803 )
+process_parent = true
+physics_process_parent = true
+[connection signal="area_entered" from="StompArea2D" to="." method="_on_StompArea2D_area_entered"]
