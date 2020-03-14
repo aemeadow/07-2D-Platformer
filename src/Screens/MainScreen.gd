@@ -12,14 +12,9 @@ func _on_End_pressed():
 func _on_Sharpest_pressed():
 	Music_Controller.play("res://music/Sharpest.ogg")
 
-func _on_StopMusicButton_pressed():
+func _on_Stop_pressed():
 	Music_Controller.stop()
 
-
-
 func _on_Venom_pressed():
-	pass # Replace with function body.
-
-
-func _on_Stop_pressed():
-	pass # Replace with function body.
+	Music_Controller.play("res://music/Venom.ogg")
+	

@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://src/UserInterface/UserInterface.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/Objects/Coin.tscn" type="PackedScene" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://cathedral/cathedral-3492842_960_720.jpg" type="Texture" id=7]
 [ext_resource path="res://assets/tileset.tres" type="TileSet" id=8]
 [ext_resource path="res://src/Actors/Enemy2.tscn" type="PackedScene" id=9]
+[ext_resource path="res://music/Venom.ogg" type="AudioStream" id=10]
 
 [node name="Level02" type="Node2D"]
 
@@ -142,5 +143,9 @@ position = Vector2( 3991.38, 905.251 )
 
 [node name="Enemy5" parent="Enemies2" instance=ExtResource( 9 )]
 position = Vector2( 769.021, -629.204 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 10 )
+autoplay = true
 
 [editable path="Player"]

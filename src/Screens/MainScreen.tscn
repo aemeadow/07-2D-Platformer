@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://assets/ui_theme.tres" type="Theme" id=1]
 [ext_resource path="res://cathedral/3q4werytj76uy.png" type="Texture" id=2]
@@ -8,12 +8,6 @@
 [ext_resource path="res://cathedral/Chomsky.otf" type="DynamicFontData" id=6]
 [ext_resource path="res://cathedral/rsz_ui_concrete_1.png" type="Texture" id=7]
 [ext_resource path="res://cathedral/CloisterBlack.ttf" type="DynamicFontData" id=8]
-[ext_resource path="res://src/Screens/Dissapear.gd" type="Script" id=9]
-[ext_resource path="res://src/Screens/End.gd" type="Script" id=10]
-[ext_resource path="res://src/Screens/Venom.gd" type="Script" id=11]
-[ext_resource path="res://src/Screens/Sharpest.gd" type="Script" id=12]
-[ext_resource path="res://src/Screens/Stop.gd" type="Script" id=13]
-[ext_resource path="res://src/Screens/Prison.gd" type="Script" id=14]
 [ext_resource path="res://src/Screens/MainScreen.gd" type="Script" id=15]
 
 [sub_resource type="DynamicFont" id=1]
@@ -68,13 +62,12 @@ anchor_left = -0.572431
 anchor_top = -1.13388
 anchor_right = 0.427569
 anchor_bottom = -0.133884
-margin_left = 1104.95
-margin_top = 1213.12
-margin_right = 1104.95
-margin_bottom = 1213.12
+margin_left = 1105.07
+margin_top = 1183.59
+margin_right = 1105.07
+margin_bottom = 1386.59
 texture = ExtResource( 2 )
-expand = true
-stretch_mode = 2
+stretch_mode = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -179,7 +172,6 @@ margin_left = 1564.0
 margin_top = 176.196
 margin_right = 1824.0
 margin_bottom = 219.196
-script = ExtResource( 11 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -189,7 +181,6 @@ margin_left = 1564.0
 margin_top = 237.683
 margin_right = 1824.0
 margin_bottom = 280.683
-script = ExtResource( 10 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -199,7 +190,6 @@ margin_left = 1564.0
 margin_top = 296.847
 margin_right = 1824.0
 margin_bottom = 339.847
-script = ExtResource( 9 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -209,7 +199,6 @@ margin_left = 1564.0
 margin_top = 358.268
 margin_right = 1824.0
 margin_bottom = 401.268
-script = ExtResource( 12 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -219,7 +208,6 @@ margin_left = 1564.0
 margin_top = 418.0
 margin_right = 1824.0
 margin_bottom = 461.0
-script = ExtResource( 14 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -229,7 +217,6 @@ margin_left = 1564.0
 margin_top = 477.054
 margin_right = 1824.0
 margin_bottom = 520.054
-script = ExtResource( 13 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
