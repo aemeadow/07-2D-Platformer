@@ -27,7 +27,7 @@ config/icon="res://cathedral/3q4werytj76uy.png"
 [autoload]
 
 PlayerData="*res://src/Autoload/PlayerData.tscn"
-Music_Controller="*res://Music_Controller.gd"
+MusicController="*res://MusicController.tscn"
 
 [display]
 
